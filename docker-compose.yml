@@ -4,10 +4,11 @@ services:
   maintenance:
     build:
       context: .
+    # image: ghcr.io/acidtib/kamal-maintenance:latest
     ports:
       - "8080:80"
     environment:
       - HEALTHCHECK_PATH=/healthz
       - LOGS_ENABLED=true
     volumes:
-      - ./web:/usr/share/caddy
+      - ./web/maintenance.html:/usr/share/caddy/index.html

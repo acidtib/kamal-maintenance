@@ -1,7 +1,5 @@
 name: Build and Publish Docker Image
 
-name: Docker
-
 on:
   workflow_dispatch:
     inputs:

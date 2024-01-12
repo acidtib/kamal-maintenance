@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  maintenance:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    environment:
+      - HEALTHCHECK_PATH=/healthz
+      - LOGS_ENABLED=true
+    volumes:
+      - ./web:/usr/share/caddy

@@ -1,6 +1,6 @@
 # Kamal-Maintenance
 
-Kamal-Maintenance is an accessory designed to simplify the process of transitioning a web application into and out of maintenance mode. By default, it displays `maintenance.html`, but you can also use a custom `.html` file. 
+Kamal-Maintenance is an accessory designed to simplify the process of transitioning a web application into and out of maintenance mode. By default, it displays `web/maintenance.html`, but you can also use a custom `.html` file. 
 
 If you need assistance setting it up, feel free to reach out to me on the Kamal Discord server at https://discord.gg/Tjx4eFARxT. My username is @acidtib.
 
@@ -32,6 +32,11 @@ accessories:
 | HEALTHCHECK_PATH | /up |
 | LOGS_ENABLED | false |
 
+
+`HEALTHCHECK_PATH`
+Sets a healthcheck path that'll respond with a static "200 OK"
+
+---
 
 To enable maintenance mode, use the following command:
 ```

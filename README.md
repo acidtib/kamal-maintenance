@@ -13,14 +13,13 @@ accessories:
     image: ghcr.io/acidtib/kamal-maintenance:latest
     roles:
       - web
-    port: "3000:80"
     env:
       clear:
-        HEALTHCHECK_PATH: /healthz
+        HEALTHCHECK_PATH: /up
         LOGS_ENABLED: true
     labels:
-      traefik.http.routers.maintenance.rule: PathPrefix(`/`)
-      traefik.http.routers.maintenance.priority: 99
+      traefik.http.routers.kamal-maintenance.rule: PathPrefix(`/`)
+      traefik.http.routers.kamal-maintenance.priority: 99
     files:
       - public/maintenance.html:/usr/share/caddy/index.html
 ```

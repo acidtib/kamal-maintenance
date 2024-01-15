@@ -12,3 +12,4 @@ services:
       - LOGS_ENABLED=true
     volumes:
       - ./web/maintenance.html:/usr/share/caddy/index.html
+      - ./web/favicon.ico:/usr/share/caddy/favicon.ico
